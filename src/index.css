@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
+    --radius: 0.625rem;
+
+    /* Ivory Dental Custom Colors */
+    --bg-primary: #E8ECF0;
+    --bg-secondary: #DDE3E9;
+    --bg-card: #F0F3F6;
+    --bg-card-active: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #6B7280;
+    --text-muted: #9CA3AF;
+    --text-accent: #B8C4CE;
+    --border-subtle: #C5CDD5;
+    --accent-dark: #1E1E1E;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  @media (hover: hover) {
+    body.desktop-cursor {
+      cursor: none;
+    }
+    body.desktop-cursor a,
+    body.desktop-cursor button,
+    body.desktop-cursor [role="button"] {
+      cursor: none;
+    }
+  }
+}
+
+@layer components {
+  .ivory-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  @media (max-width: 1279px) {
+    .ivory-container {
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .ivory-container {
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+}
+
+@layer utilities {
+  .text-gradient-muted {
+    color: var(--text-accent);
+  }
+
+  .bg-ivory-primary {
+    background-color: var(--bg-primary);
+  }
+
+  .bg-ivory-secondary {
+    background-color: var(--bg-secondary);
+  }
+
+  .bg-ivory-card {
+    background-color: var(--bg-card);
+  }
+}
+
+/* Orbit rotation animation */
+@keyframes orbit-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Float animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Bounce animation for scroll indicator */
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* Particle float animations */
+@keyframes particle-float-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.3; }
+  25% { transform: translate(10px, -20px) rotate(45deg); opacity: 0.6; }
+  50% { transform: translate(-5px, -40px) rotate(90deg); opacity: 0.4; }
+  75% { transform: translate(15px, -20px) rotate(135deg); opacity: 0.5; }
+}
+
+@keyframes particle-float-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); opacity: 0.4; }
+  33% { transform: translate(-15px, -30px) rotate(-60deg); opacity: 0.6; }
+  66% { transform: translate(10px, -15px) rotate(-120deg); opacity: 0.3; }
+}
+
+/* Grayscale to colour transition */
+.grayscale-hover {
+  filter: grayscale(100%);
+  transition: filter 0.5s ease, transform 0.4s ease;
+}
+
+.grayscale-hover:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-subtle);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
