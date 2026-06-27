@@ -136,7 +136,7 @@ export function HeroSection({ isReady }: HeroSectionProps) {
             <div className="relative w-[280px] h-[400px] sm:w-[350px] sm:h-[500px]">
               <img
                 ref={implantRef}
-                src="/images/implant.png"
+                src="./images/implant.png"
                 alt="Dental implant"
                 className="w-full h-full object-contain animate-float"
                 style={{ opacity: 0 }}

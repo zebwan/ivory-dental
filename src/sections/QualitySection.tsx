@@ -120,7 +120,7 @@ export function QualitySection() {
           {/* Implant image */}
           <img
             ref={implantRef}
-            src="/images/exploded-implant.png"
+            src="./images/exploded-implant.png"
             alt="Exploded view of dental implant components"
             className="w-full h-auto animate-float relative z-10"
           />

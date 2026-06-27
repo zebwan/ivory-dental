@@ -7,9 +7,9 @@ import { PillButton } from '@/components/PillButton';
 gsap.registerPlugin(ScrollTrigger);
 
 const patients = [
-  { name: 'Aisyah', image: '/images/patient-aisyah.jpg', label: "Aisyah's whitening journey" },
-  { name: 'Raja', image: '/images/patient-raja.jpg', label: "Raja's braces transformation" },
-  { name: 'Devi', image: '/images/patient-devi.jpg', label: "Devi's smile makeover" },
+  { name: 'Aisyah', image: './images/patient-aisyah.jpg', label: "Aisyah's whitening journey" },
+  { name: 'Raja', image: './images/patient-raja.jpg', label: "Raja's braces transformation" },
+  { name: 'Devi', image: './images/patient-devi.jpg', label: "Devi's smile makeover" },
 ];
 
 export function ResultsSection() {

@@ -65,7 +65,7 @@ export function Preloader({ onComplete }: PreloaderProps) {
       {/* 3D Implant - behind */}
       <img
         ref={implantRef}
-        src="/images/implant.png"
+        src="./images/implant.png"
         alt=""
         className="absolute z-0 w-[200px] sm:w-[300px] h-auto object-contain"
         style={{ opacity: 0 }}

@@ -138,7 +138,7 @@ export function ServicesSection() {
               data-cursor="pointer"
             >
               <img
-                src="/images/clinic-interior.jpg"
+                src="./images/clinic-interior.jpg"
                 alt="Our clinic in KL"
                 className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
               />

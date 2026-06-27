@@ -85,7 +85,7 @@ export function StatsSection() {
           {/* Implant (continued from hero) */}
           <div className="hidden lg:flex justify-center items-center w-[300px] h-[350px]">
             <img
-              src="/images/implant.png"
+              src="./images/implant.png"
               alt=""
               className="w-full h-full object-contain opacity-60"
             />
